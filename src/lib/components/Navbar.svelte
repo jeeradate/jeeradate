@@ -9,7 +9,7 @@
 		{ href: '/', label: 'Home' },
 		{ href: '/about', label: 'About' },
 		{ href: '/sandbox', label: 'Sandbox' },
-		{ href: 'https://github.com/jeeradate', label: 'Github' }
+		{ href: 'https://github.com/jeeradate/jeeradate', label: 'Github' }
 	];
 
 	function toggleMenu() {
