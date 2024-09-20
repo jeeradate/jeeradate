@@ -1,38 +1,12 @@
-# create-svelte
+# เว็บนี้สร้างเพื่อเรียน Svetekit
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/main/packages/create-svelte).
+เพื่อทำ Progressive Web Application สำหรับจัดการระบบต่างๆ ในร้านอาหาร ตั้งแต่ Menu, รับ Order, คิดราคา ฯลฯ โดยตั้งใจให้เป็น Open Source ให้ร้านอาหารนำไปใช้ได้ฟรี โดยร้านค้าสามารถแก้ไขส่วนต่างๆ ของแอป รวมถึง ราคา Menu โดยการแก้ไขค่าต่างๆใน Google Sheet ซึ่งใช้ง่าย และฟรี 
 
-## Creating a project
+หากโปรแกรมนี้ทำได้ดี คงมีผู้ใช้งานเยอะ เพราะเสียแต่ค่า Hosting และ Domain name ซึ่งไม่แพง 
 
-If you're seeing this, you've probably already done this step. Congrats!
+ผู้ร่วมพัฒนาจะมีชื่อร่วมเป็นผู้พัฒนา และ มีรายได้จากการติดตั้ง อบรม และดัดแปลงโปรแกรม หรือเขียน Extention ตามความต้องการของลูกค้า 
+และจะเปิดให้นักพัฒนาทั่วไปเขียน Add-on นำมาขายในโครงการนี้ด้วย 
 
-```bash
-# create a new project in the current directory
-npm create svelte@latest
+แต่ตอนนี้ผมยังไม่เก่งพอ ค่อยๆ เรียนรู้ทีละ Function ไปเรื่อยๆ ยินดีน้อมรับคำแนะนำและติชม
+หรือจะร่วมพัฒนาด้วยกันก็ยินดียิ่งครับ
 
-# create a new project in my-app
-npm create svelte@latest my-app
-```
-
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
-
-## Building
-
-To create a production version of your app:
-
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
