@@ -2,7 +2,7 @@
 	import { AppBar, AppShell, LightSwitch } from '@skeletonlabs/skeleton';
     import { Menu, X } from 'lucide-svelte';
 	import { slide } from 'svelte/transition';
-
+	// import ThemeSwitcher from '$lib/components/ThemeSwitcher.svelte';
 	let isOpen = false;
 
 	const navItems = [
@@ -38,6 +38,7 @@
 				</button>
 				<LightSwitch />
 			</svelte:fragment>
+			<!-- <ThemeSwitcher /> -->
 		</AppBar>
 	</svelte:fragment>
 

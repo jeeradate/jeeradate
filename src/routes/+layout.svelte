@@ -21,6 +21,7 @@
 	import { computePosition, autoUpdate, flip, shift, offset, arrow } from '@floating-ui/dom';
 	import { storePopup } from '@skeletonlabs/skeleton';
 	import Navbar from '$lib/components/Navbar.svelte';
+	// import ThemeSwitcher from '$lib/components/ThemeSwitcher.svelte';
 	storePopup.set({ computePosition, autoUpdate, flip, shift, offset, arrow });
 </script>
 
@@ -28,6 +29,7 @@
 <AppShell>
 	<svelte:fragment slot="header">
 		<!-- App Bar -->
+		<!-- <ThemeSwitcher /> -->
 		 <Navbar />
 		
 	</svelte:fragment>
