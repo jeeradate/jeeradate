@@ -1,53 +1,38 @@
 <script lang="ts">
 	import { AppBar, AppShell, LightSwitch } from '@skeletonlabs/skeleton';
-    import { Menu, X } from 'lucide-svelte';
+	import { Menu, X } from 'lucide-svelte';
 	import { slide } from 'svelte/transition';
-	import ThemeSwitcher from '$lib/components/ThemeSwitcher.svelte';
+
 	let isOpen = false;
 
 	const navItems = [
-		{ href: '/', label: 'Home'  },
+		{ href: '/', label: 'Home' },
 		{ href: '/about', label: 'About' },
 		{ href: '/sandbox', label: 'Sandbox' },
-		{ href: '/test',label: 'TestArea'},
-		{ href: 'https://github.com/jeeradate/jeeradate',label: 'SourceCode', target:'_blank'},
-
-	
+		{ href: '/test', label: 'TestArea' },
+		{ href: 'https://github.com/jeeradate/jeeradate', label: 'SourceCode', target: '_blank' }
 	];
 
 	function toggleMenu() {
 		isOpen = !isOpen;
 	}
-
-
 </script>
 
 <AppShell>
 	<svelte:fragment slot="header">
 		<AppBar>
-
 			<svelte:fragment slot="lead">
-				<strong class="text-xl uppercase">JK-Sandbox</strong>
-			  </svelte:fragment>
-			  <svelte:fragment slot="trail">
-				<ThemeSwitcher />
-				<!-- Other navbar items -->
-			  <!-- </svelte:fragment> -->
-
-
-
-
-
-			<!-- <svelte:fragment slot="lead"> -->
-				<!-- <strong class="text-xl uppercase">JK-Sandbox</strong> -->
-			<!-- </svelte:fragment> -->
-			<!-- <svelte:fragment slot="trail"> -->
+				<strong class="text-xl ">JK-Sandbox</strong>
+			</svelte:fragment>
+			<LightSwitch  />
+			<svelte:fragment slot="trail">
 				<div class="hidden md:flex space-x-4">
 					{#each navItems as item}
-					
-						
-						<a href={item.href} class="btn btn-sm variant-ghost-surface hover:bg-blue-300 hover:text-black" target={item.target}>{item.label}</a>
-					
+						<a
+							href={item.href}
+							class="btn btn-sm variant-ghost-surface hover:bg-blue-300 hover:text-black"
+							target={item.target}>{item.label}</a
+						>
 					{/each}
 				</div>
 				<button class="btn btn-sm md:hidden" on:click={toggleMenu}>
@@ -57,9 +42,7 @@
 						<Menu size={24} />
 					{/if}
 				</button>
-				<LightSwitch  />
 			</svelte:fragment>
-			<!-- <ThemeSwitcher /> -->
 		</AppBar>
 	</svelte:fragment>
 
@@ -67,7 +50,11 @@
 		<div class="md:hidden" transition:slide={{ duration: 300 }}>
 			<nav class="list-nav p-4">
 				{#each navItems as item}
-					<a href={item.href} class="btn btn-lg variant-ghost-surface w-full justify-start" on:click={toggleMenu}>
+					<a
+						href={item.href}
+						class="btn btn-lg variant-ghost-surface w-full justify-start"
+						on:click={toggleMenu}
+					>
 						{item.label}
 					</a>
 				{/each}
