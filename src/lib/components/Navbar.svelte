@@ -2,32 +2,52 @@
 	import { AppBar, AppShell, LightSwitch } from '@skeletonlabs/skeleton';
     import { Menu, X } from 'lucide-svelte';
 	import { slide } from 'svelte/transition';
-	// import ThemeSwitcher from '$lib/components/ThemeSwitcher.svelte';
+	import ThemeSwitcher from '$lib/components/ThemeSwitcher.svelte';
 	let isOpen = false;
 
 	const navItems = [
-		{ href: '/', label: 'Home' },
+		{ href: '/', label: 'Home'  },
 		{ href: '/about', label: 'About' },
 		{ href: '/sandbox', label: 'Sandbox' },
 		{ href: '/test',label: 'TestArea'},
+		{ href: 'https://github.com/jeeradate/jeeradate',label: 'SourceCode', target:'_blank'},
+
 	
 	];
 
 	function toggleMenu() {
 		isOpen = !isOpen;
 	}
+
+
 </script>
 
 <AppShell>
 	<svelte:fragment slot="header">
 		<AppBar>
+
 			<svelte:fragment slot="lead">
 				<strong class="text-xl uppercase">JK-Sandbox</strong>
-			</svelte:fragment>
-			<svelte:fragment slot="trail">
+			  </svelte:fragment>
+			  <svelte:fragment slot="trail">
+				<ThemeSwitcher />
+				<!-- Other navbar items -->
+			  <!-- </svelte:fragment> -->
+
+
+
+
+
+			<!-- <svelte:fragment slot="lead"> -->
+				<!-- <strong class="text-xl uppercase">JK-Sandbox</strong> -->
+			<!-- </svelte:fragment> -->
+			<!-- <svelte:fragment slot="trail"> -->
 				<div class="hidden md:flex space-x-4">
 					{#each navItems as item}
-						<a href={item.href} class="btn btn-sm variant-ghost-surface">{item.label}</a>
+					
+						
+						<a href={item.href} class="btn btn-sm variant-ghost-surface hover:bg-blue-300 hover:text-black" target={item.target}>{item.label}</a>
+					
 					{/each}
 				</div>
 				<button class="btn btn-sm md:hidden" on:click={toggleMenu}>
@@ -37,7 +57,7 @@
 						<Menu size={24} />
 					{/if}
 				</button>
-				<LightSwitch />
+				<LightSwitch  />
 			</svelte:fragment>
 			<!-- <ThemeSwitcher /> -->
 		</AppBar>
